@@ -1,19 +1,10 @@
 chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
     console.log("entered background.js")
-    sendMsg(msg);
-    // console.log(msg)
-    // return true;
-    // https://powerful-island-90704.herokuapp.com/https://pokeapi.co/api/v2/ability/2
-
-    // fetch(`https://pokeapi.co/api/v2/pokemon/${msg}`)
-    // , {
-    //     method: 'GET',
-    //     // headers: { "Access-Control-ALlow-Origin": "*" }
-    //     // body: JSON.stringify("test")
-    // }
-    // .then(data => data.json())
-    // .then(data => console.log(data))
-    // .catch(err => console.log(err))
+    if (msg.message) {
+        sendMsg(msg);
+    } else {
+        openTwitter();
+    }
 });
 
 const URL = 'https://thawing-ocean-48836.herokuapp.com/twitterAPI'
@@ -31,4 +22,14 @@ function sendMsg(msg) {
     })
         .then((response) => response.json())
         .then((parsed) => console.log(parsed))
+}
+//twitter buttom event listener
+// chrome.browserAction.onClicked.addListener(function (activeTab) {
+//     var newURL = "https://twitter.com";
+//     chrome.tabs.create({ url: newURL });
+// });
+
+function openTwitter() {
+    var newURL = "https://twitter.com";
+    chrome.tabs.create({ url: newURL });
 }

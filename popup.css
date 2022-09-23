@@ -1,0 +1,48 @@
+main {
+		border-radius: 20px;
+    width: 300px;
+    height: 300px;
+    padding: 25px;
+    border: 1px solid orange;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#submit,
+#twitter {
+	background-color: rgb(2, 158, 255);
+	color: white;
+	border: none;
+	height: 36px;
+	width: 74px;
+	border-radius: 18px;
+	font-weight: bold;
+	font-size: 14px;
+	cursor: pointer;
+	margin-left: 8px;
+}
+
+#twitter {
+    text-decoration: none;
+    padding: 8px 20px;
+}
+
+#submit:hover, #twitter:hover{
+	opacity: 0.7;
+}
+
+#submit:active, #twitter:active{
+	opacity: 0.3;
+}
+
+input{
+  box-sizing: border-box;
+	height: 36px;
+	width: 160px;
+	border-radius: 18px;
+	border: 1px solid rgb(84, 189, 255);
+	padding: 6px 12px
+	
+}
+
