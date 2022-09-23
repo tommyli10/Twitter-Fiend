@@ -20,3 +20,15 @@ NjFwSDhxMUg3Uk1fQW4wOEREOGc6MTpjaQ
 
 Client Secret
 LSw-Z0-344x_7TKLUtGgmBSCH_8tkWgNT2xsMaTUGZLVLEPr6N
+
+// Manifest V2:
+{
+    "manifest_version" : 2,
+		"name" : "Twitter_Fiend",
+		"version" : "1.0",
+		"description" : "For tweetaholics. Tweet faster. Anywhere",
+		"icons" : {"227" : "Icon.png"},
+		"browser_action": {"default_popup": "popup.html", "default_icon": "Icon.png"},
+        "background": {"scripts": ["background.js"]},
+		"permissions": ["storage", "activeTab", "tabs"]
+}
